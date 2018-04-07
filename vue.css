@@ -1,0 +1,76 @@
+.title{
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px rgb(185, 182, 182);
+    font-weight: 900;
+}
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Lucida Sans';
+  font-size: 20px;
+  text-align: center;
+  color: rgb(131, 117, 131) !important;
+}
+
+h3 {
+  color: rgb(153, 153, 152) !important;
+}
+
+#root {
+  text-align: center;
+  background: rgb(80, 75, 75);
+  padding: 10px 15px;
+}
+
+.foo {
+  background: rgb(209, 175, 175);
+  margin-top: 20px;
+  padding: 50px;
+
+}
+
+.main {
+  position: absolute;
+  width: 90%;
+
+}
+
+ul.menu {
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  background: #1A6AA1;
+  color: white;
+}
+
+ul.menu li {
+  display: inline;
+}
+
+ul.menu li a {
+  color: rgb(241, 238, 232) !important;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+ul.menu li a.router-link-active {
+  background: rgb(209, 175, 175);
+}
+
+.bar-enter-active,
+.bar-leave-active {
+  transition: margin-left 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bar-enter {
+  margin-left: -2222px;
+}
+
+.bar-leave-to {
+  margin-left: 2222px;
+}

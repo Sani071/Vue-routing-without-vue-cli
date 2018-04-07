@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-js</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="vue.css">
+
+  <!-- You Must be Open it on live server and first time with net connection-->
+
+</head>
+
+<body>
+  <div id="root">
+
+    <h1 class="text-center text-primary">My Vue Js learning </h1>
+    <div class="col-12 text-center">
+      <h1 class="title">RS-SANI AHMED</h1>
+    </div>
+    <ul class="menu">
+      <li class="a.router-link-active">
+        <router-link to="/home">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <router-link to="/contact">Conatct</router-link>
+      </li>
+    </ul>
+    <!-- Output area rs-sani ahmed -->
+    <transition name="bar">
+      <router-view>
+      </router-view>
+    </transition>
+  </div>
+
+
+  <!-- script cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
+  <!-- vue routing template rs sani ahmed -->
+  <script>
+    var Home = {
+      template: `
+      <div class="main">
+          <div class="foo">
+            <h1>Home</h1><hr>
+            <p class="lead">Home age is goes here</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, impedit. Ipsum libero modi a? Veniam perferendis nihil facere deleniti illum!</p>
+          </div>
+        </div>
+      `
+    };
+    var About = {
+      template: `
+      <div class="main">
+          <div class="foo">
+            <h1>About</h1><hr>
+            <p class="lead">About page is goes here</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, impedit. Ipsum libero modi a? Veniam perferendis nihil facere deleniti illum!</p>
+          </div>
+        </div>
+      `
+    };
+    var Contact = {
+      template: `
+      <div class="main">
+          <div class="foo">
+            <h1>Contanct</h1><hr>
+            <p class="lead">Contanct page is goes here</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, impedit. Ipsum libero modi a? Veniam perferendis nihil facere deleniti illum!</p>
+          </div>
+        </div>
+      `
+    };
+    // routing system
+    var routes = [{
+        path: '/home',
+        component: Home
+      },
+      {
+        path: '/about',
+        component: About
+      },
+      {
+        path: '/contact',
+        component: Contact
+      }
+    ];
+    var router = new VueRouter({
+      routes: routes,
+      mode: 'history',
+      base: '/vuerouter'
+    });
+    var app = new Vue({
+      router: router
+    }).$mount("#root");
+  </script>
+
+</body>
+
+</html>
